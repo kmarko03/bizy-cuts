@@ -35,7 +35,7 @@ export default function Testimonials() {
                 <div className="flex flex-col md:flex-row gap-16 md:gap-24 items-center w-full">
                     {/* Left Side: Header */}
                     <div className="w-full md:w-1/3 flex flex-col">
-                        <h2 className="text-[2rem] sm:text-5xl md:text-[4rem] leading-[0.95] font-medium tracking-tight mb-6">
+                        <h2 className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-[6rem] leading-[0.9] font-medium tracking-tight mb-6">
                             A Reputation Built<br />on Results.<br />
                         </h2>
                         <p className="text-[13px] md:text-sm font-medium text-brand-bg/70 leading-relaxed max-w-sm">

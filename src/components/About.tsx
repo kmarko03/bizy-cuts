@@ -5,7 +5,7 @@ export default function About() {
         <section id="about" className="py-24 bg-brand-bg text-brand-text overflow-hidden">
             {/* Top Text Blocks */}
             <div className="px-6 md:px-16 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
-                <h2 className="text-[2rem] sm:text-5xl md:text-[4.5rem] leading-[0.95] font-medium tracking-tight mb-16 text-brand-text">
+                <h2 className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-[6rem] leading-[0.9] font-medium tracking-tight mb-16 text-brand-text">
                     A Tradition of <br className="hidden md:block" />
                     Precision and Care.
                 </h2>

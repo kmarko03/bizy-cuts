@@ -71,7 +71,7 @@ export default function Team() {
             <div className="max-w-7xl mx-auto">
                 {/* Header section matching About/Services */}
                 <div className="mb-10 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 md:gap-0">
-                    <h2 className="text-[2rem] sm:text-5xl md:text-[4.5rem] leading-[0.95] font-medium tracking-tight text-brand-text">
+                    <h2 className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-[6rem] leading-[0.9] font-medium tracking-tight text-brand-text">
                         Meet the<br className="hidden md:block" />
                         Team.
                     </h2>

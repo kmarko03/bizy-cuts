@@ -54,7 +54,7 @@ export default function Services() {
                 {/* Left Side: Headings */}
                 <div className="flex flex-col w-full lg:w-[55%] justify-center">
                     <div className="mb-10 lg:mb-16">
-                        <h2 className="text-[2rem] sm:text-5xl md:text-[4.5rem] leading-[0.95] font-medium tracking-tight text-brand-text mb-4">
+                        <h2 className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-[6rem] leading-[0.9] font-medium tracking-tight text-brand-text mb-4">
                             Services
                         </h2>
                         <p className="text-[13px] md:text-sm font-medium text-brand-text/70 leading-relaxed max-w-sm">
