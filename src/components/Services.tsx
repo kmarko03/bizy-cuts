@@ -82,9 +82,19 @@ export default function Services() {
                                     * Prices may vary depending on the stylist.
                                 </div>
                                 <div className="mt-8 mb-4">
-                                    <a href="tel:5551234567" className="text-[10px] font-bold tracking-[0.2em] uppercase border-b border-brand-text pb-1 hover:text-brand-red hover:border-brand-red transition-colors inline-block">
+                                    <button
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (window.innerWidth < 768) {
+                                                window.location.href = "tel:6304356080";
+                                            } else {
+                                                window.location.href = "#contact";
+                                            }
+                                        }}
+                                        className="text-[10px] font-bold tracking-[0.2em] uppercase border-b border-brand-text pb-1 hover:text-brand-red hover:border-brand-red transition-colors inline-block"
+                                    >
                                         BOOK APPOINTMENT
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -116,9 +126,19 @@ export default function Services() {
                                 </div>
 
                                 <div className="mt-12">
-                                    <a href="#contact" className="text-[10px] font-bold tracking-[0.2em] uppercase border-b border-brand-text pb-1 hover:text-brand-red hover:border-brand-red transition-colors inline-block">
+                                    <button
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (window.innerWidth < 768) {
+                                                window.location.href = "tel:6304356080";
+                                            } else {
+                                                window.location.href = "#contact";
+                                            }
+                                        }}
+                                        className="text-[10px] font-bold tracking-[0.2em] uppercase border-b border-brand-text pb-1 hover:text-brand-red hover:border-brand-red transition-colors inline-block"
+                                    >
                                         BOOK APPOINTMENT
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>

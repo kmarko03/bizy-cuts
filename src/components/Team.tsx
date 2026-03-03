@@ -83,7 +83,7 @@ export default function Team() {
                 {/* Grid of Team Members */}
                 <div ref={scrollContainerRef} className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6 mt-8 md:mt-12 pb-8 md:pb-0 snap-x snap-mandatory hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth">
                     {teamMembers.map((member, idx) => (
-                        <div key={idx} className="group cursor-pointer min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center shrink-0 md:shrink">
+                        <div key={idx} className="group cursor-pointer w-[85vw] sm:w-[60vw] md:w-auto snap-center shrink-0 md:shrink">
                             {/* Stylist Image Box */}
                             <div className="w-full aspect-[3/4] bg-[#EAE8E2] mb-6 relative flex items-center justify-center overflow-hidden transition-colors duration-500 group-hover:bg-[#DBD8CF]">
                                 <span className="font-medium text-brand-text/30 text-[10px] tracking-[0.2em] uppercase -z-10">

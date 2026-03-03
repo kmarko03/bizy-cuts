@@ -41,9 +41,18 @@ export default function Hero() {
                         <p className="max-w-xl text-sm md:text-[15px] font-medium text-brand-text/70 leading-relaxed mb-8">
                             At Bizy Cuts, we combine precision craftsmanship with genuine care — delivering sharp cuts, timeless style, and a welcoming experience for every client who walks through our doors.
                         </p>
-                        <a href="#contact" className="px-8 py-4 border border-brand-text/20 rounded-full text-[11px] md:text-sm font-bold tracking-[0.2em] uppercase hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 inline-block text-center group bg-brand-bg shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:shadow-lg">
+                        <button
+                            onClick={() => {
+                                if (window.innerWidth < 768) {
+                                    window.location.href = "tel:6304356080";
+                                } else {
+                                    window.location.href = "#contact";
+                                }
+                            }}
+                            className="px-8 py-4 border border-brand-text/20 rounded-full text-[11px] md:text-sm font-bold tracking-[0.2em] uppercase hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 inline-block text-center group bg-brand-bg shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:shadow-lg"
+                        >
                             Book Appointment
-                        </a>
+                        </button>
                     </div>
 
                     {/* Navigation Buttons for Gallery */}
@@ -63,7 +72,7 @@ export default function Hero() {
                     className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth flex-1 min-h-[40vh]"
                 >
                     {galleryItems.map((item, idx) => (
-                        <div key={idx} className="group cursor-pointer min-w-[85vw] sm:min-w-[60vw] md:min-w-[400px] h-full snap-center shrink-0 relative flex flex-col">
+                        <div key={idx} className="group cursor-pointer w-[85vw] sm:w-[60vw] md:w-[400px] shrink-0 h-full snap-center relative flex flex-col">
                             {/* Gallery Image Box */}
                             <div className="w-full h-full min-h-[40vh] md:min-h-[50vh] bg-[#EAE8E2] relative flex items-center justify-center overflow-hidden transition-colors duration-500 group-hover:bg-[#DBD8CF] flex-1">
                                 <span className="font-medium text-brand-text/30 text-[10px] tracking-[0.2em] uppercase -z-10">
