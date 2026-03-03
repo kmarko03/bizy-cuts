@@ -18,21 +18,18 @@ export default function Footer() {
                             <MapPin className="shrink-0 mt-1" size={20} />
                             <div>
                                 <h4 className="text-[11px] font-black uppercase mb-2 tracking-widest text-brand-text/50">Address</h4>
-                                <p className="text-[15px] md:text-lg font-medium leading-relaxed">
-                                    444 75th St, <br />
-                                    Downers Grove, IL 60516
-                                </p>
+                                <a
+                                    href="https://maps.google.com/maps?q=444%2075th%20St,%20Downers%20Grove,%20IL%2060516"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-start md:items-center gap-2 text-[15px] md:text-lg font-medium leading-relaxed hover:text-brand-red transition-colors underline underline-offset-4 decoration-brand-text/20 hover:decoration-brand-red"
+                                >
+                                    <span>
+                                        444 75th St, <br className="md:hidden" /> Downers Grove, IL 60516
+                                    </span>
+                                    <ArrowUpRight size={14} className="opacity-50 shrink-0 mt-1 md:mt-0" />
+                                </a>
                             </div>
-                        </div>
-                        <div className="pl-9">
-                            <a
-                                href="https://maps.google.com/maps?q=444%2075th%20St,%20Downers%20Grove,%20IL%2060516"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-6 py-3 border border-brand-text/20 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center gap-2 max-w-fit shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:shadow-lg"
-                            >
-                                Directions <ArrowUpRight size={14} />
-                            </a>
                         </div>
                     </div>
 
@@ -44,18 +41,10 @@ export default function Footer() {
                                 <Phone className="shrink-0 mt-1" size={20} />
                                 <div>
                                     <h4 className="text-[11px] font-black uppercase mb-2 tracking-widest text-brand-text/50">Phone</h4>
-                                    <p className="text-[15px] md:text-lg font-medium leading-relaxed">
-                                        <a href="tel:6304356080" className="hover:text-brand-red transition-colors block">(630) 435-6080</a>
-                                    </p>
+                                    <a href="tel:6304356080" className="flex items-center gap-2 text-[15px] md:text-lg font-medium leading-relaxed hover:text-brand-red transition-colors underline underline-offset-4 decoration-brand-text/20 hover:decoration-brand-red">
+                                        (630) 435-6080 <ArrowUpRight size={14} className="opacity-50" />
+                                    </a>
                                 </div>
-                            </div>
-                            <div className="pl-9">
-                                <a
-                                    href="tel:6304356080"
-                                    className="px-6 py-3 border border-brand-text/20 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center gap-2 max-w-fit shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:shadow-lg"
-                                >
-                                    Call to Book
-                                </a>
                             </div>
                         </div>
 
