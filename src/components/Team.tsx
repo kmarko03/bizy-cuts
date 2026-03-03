@@ -104,7 +104,7 @@ export default function Team() {
                                 </span>
                                 {/* Image Wrapper */}
                                 <div className="absolute inset-0 transition-all duration-700 pointer-events-none overflow-hidden group">
-                                    <Image src={`/stylist${idx + 1}.jpg`} unoptimized={true} fill alt={member.name} className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                                    <Image src={`/stylist${idx + 1}.jpg`} unoptimized={true} fill alt={member.name} className={`object-cover group-hover:scale-105 transition-transform duration-700 ${idx === 1 ? 'object-[center_20%]' : 'object-center'}`} />
                                 </div>
                             </div>
 

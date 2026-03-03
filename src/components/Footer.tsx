@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -13,7 +13,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 xl:gap-16">
 
                     {/* Address & Directions */}
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-6 order-1">
                         <div className="flex items-start gap-4">
                             <MapPin className="shrink-0 mt-1" size={20} />
                             <div>
@@ -29,38 +29,55 @@ export default function Footer() {
                                 href="https://maps.google.com/maps?q=444%2075th%20St,%20Downers%20Grove,%20IL%2060516"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-6 py-3 border border-brand-text/20 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 inline-block text-center shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:shadow-lg"
+                                className="px-6 py-3 border border-brand-text/20 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center gap-2 max-w-fit shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:shadow-lg"
                             >
-                                Get Directions
+                                Directions <ArrowUpRight size={14} />
                             </a>
                         </div>
                     </div>
 
-                    {/* Phone & Socials */}
-                    <div className="flex flex-col gap-12">
-                        <div className="flex items-start gap-4">
-                            <Phone className="shrink-0 mt-1" size={20} />
-                            <div>
-                                <h4 className="text-[11px] font-black uppercase mb-2 tracking-widest text-brand-text/50">Phone</h4>
-                                <p className="text-[15px] md:text-lg font-medium leading-relaxed">
-                                    <a href="tel:6304356080" className="hover:text-brand-red transition-colors">(630) 435-6080</a>
-                                </p>
+                    {/* Phone & Socials (Order swapped on mobile) */}
+                    <div className="flex flex-col gap-12 order-3 sm:order-2">
+                        {/* Phone Block */}
+                        <div className="flex flex-col gap-6">
+                            <div className="flex items-start gap-4">
+                                <Phone className="shrink-0 mt-1" size={20} />
+                                <div>
+                                    <h4 className="text-[11px] font-black uppercase mb-2 tracking-widest text-brand-text/50">Phone</h4>
+                                    <p className="text-[15px] md:text-lg font-medium leading-relaxed">
+                                        <a href="tel:6304356080" className="hover:text-brand-red transition-colors block">(630) 435-6080</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="pl-9">
+                                <a
+                                    href="tel:6304356080"
+                                    className="px-6 py-3 border border-brand-text/20 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center gap-2 max-w-fit shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:shadow-lg"
+                                >
+                                    Call to Book
+                                </a>
                             </div>
                         </div>
+
+                        {/* Socials Block */}
                         <div className="flex items-start gap-4">
                             <div className="w-[20px] shrink-0"></div>
                             <div>
                                 <h4 className="text-[11px] font-black uppercase mb-2 tracking-widest text-brand-text/50">Socials</h4>
-                                <div className="flex gap-4 text-[15px] md:text-lg font-medium leading-relaxed">
-                                    <a href="https://www.instagram.com/bizy_cuts/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-red transition-colors">Instagram</a>
-                                    <a href="https://www.facebook.com/BizyCuts" target="_blank" rel="noopener noreferrer" className="hover:text-brand-red transition-colors">Facebook</a>
+                                <div className="flex flex-col gap-3 text-[15px] md:text-lg font-medium leading-relaxed">
+                                    <a href="https://www.instagram.com/bizy_cuts/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-brand-red transition-colors underline underline-offset-4 decoration-brand-text/20 hover:decoration-brand-red">
+                                        Instagram <ArrowUpRight size={14} className="opacity-50" />
+                                    </a>
+                                    <a href="https://www.facebook.com/BizyCuts" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-brand-red transition-colors underline underline-offset-4 decoration-brand-text/20 hover:decoration-brand-red">
+                                        Facebook <ArrowUpRight size={14} className="opacity-50" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Hours */}
-                    <div className="flex items-start gap-4">
+                    {/* Hours (Moved up on mobile) */}
+                    <div className="flex items-start gap-4 order-2 sm:order-3">
                         <Clock className="shrink-0 mt-1" size={20} />
                         <div className="w-full">
                             <h4 className="text-[11px] font-black uppercase mb-2 tracking-widest text-brand-text/50">Hours</h4>

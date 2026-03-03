@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+const MAIN_PHONE_NUMBER = "6304356080";
+
 const servicesData = [
     {
         id: "womens",
@@ -86,14 +88,14 @@ export default function Services() {
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             if (window.innerWidth < 768) {
-                                                window.location.href = "tel:6304356080";
+                                                window.location.href = `tel:${MAIN_PHONE_NUMBER}`;
                                             } else {
                                                 window.location.href = "#contact";
                                             }
                                         }}
                                         className="text-[10px] font-bold tracking-[0.2em] uppercase border-b border-brand-text pb-1 hover:text-brand-red hover:border-brand-red transition-colors inline-block"
                                     >
-                                        BOOK APPOINTMENT
+                                        CALL TO BOOK
                                     </button>
                                 </div>
                             </div>
@@ -130,14 +132,14 @@ export default function Services() {
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             if (window.innerWidth < 768) {
-                                                window.location.href = "tel:6304356080";
+                                                window.location.href = `tel:${MAIN_PHONE_NUMBER}`;
                                             } else {
                                                 window.location.href = "#contact";
                                             }
                                         }}
                                         className="text-[10px] font-bold tracking-[0.2em] uppercase border-b border-brand-text pb-1 hover:text-brand-red hover:border-brand-red transition-colors inline-block"
                                     >
-                                        BOOK APPOINTMENT
+                                        CALL TO BOOK
                                     </button>
                                 </div>
                             </div>

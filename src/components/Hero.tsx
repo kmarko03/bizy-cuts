@@ -64,7 +64,7 @@ export default function Hero() {
                             }}
                             className="px-8 py-4 border border-brand-text/20 rounded-full text-[11px] md:text-sm font-bold tracking-[0.2em] uppercase hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 inline-block text-center group bg-brand-bg shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:shadow-lg"
                         >
-                            Book Appointment
+                            Call to Book
                         </button>
                     </div>
 
@@ -93,7 +93,7 @@ export default function Hero() {
                                 </span>
                                 {/* Image Wrapper */}
                                 <div className="absolute inset-0 transition-all duration-700 pointer-events-none overflow-hidden">
-                                    <Image src={item.image} unoptimized={true} fill alt={item.title} className="object-cover hover:scale-105 transition-transform duration-700" />
+                                    <Image src={item.image} priority={idx < 3} unoptimized={true} fill alt={item.title} className="object-cover hover:scale-105 transition-transform duration-700" />
                                 </div>
                             </div>
 
