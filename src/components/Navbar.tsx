@@ -24,13 +24,21 @@ export default function Navbar() {
                 {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
 
-            {/* Mobile nav overlay */}
-            <div className={`fixed inset-0 h-[100dvh] w-full overflow-y-auto bg-brand-bg transition-opacity duration-300 md:hidden z-40 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
-                <div className="flex flex-col items-center justify-start min-h-full pb-20 pt-32 gap-8">
-                    <Link href="#about" onClick={() => setIsOpen(false)} className="text-3xl font-medium tracking-tight hover:text-brand-red transition-colors">About</Link>
-                    <Link href="#services" onClick={() => setIsOpen(false)} className="text-3xl font-medium tracking-tight hover:text-brand-red transition-colors">Services</Link>
-                    <Link href="#team" onClick={() => setIsOpen(false)} className="text-3xl font-medium tracking-tight hover:text-brand-red transition-colors">Team</Link>
-                    <Link href="#contact" onClick={() => setIsOpen(false)} className="text-3xl font-medium tracking-tight hover:text-brand-red transition-colors">Contact</Link>
+            {/* Mobile nav drawer */}
+            <div className={`absolute top-[100%] right-6 w-[calc(100%-48px)] max-w-sm bg-brand-bg shadow-2xl border border-brand-text/10 rounded-2xl transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] md:hidden z-40 overflow-hidden ${isOpen ? "opacity-100 translate-y-4 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"}`}>
+                <div className="flex flex-col p-8 gap-6">
+                    <Link href="#about" onClick={() => setIsOpen(false)} className="text-2xl font-medium tracking-tight hover:text-brand-red transition-colors border-b border-brand-text/5 pb-4">
+                        About
+                    </Link>
+                    <Link href="#services" onClick={() => setIsOpen(false)} className="text-2xl font-medium tracking-tight hover:text-brand-red transition-colors border-b border-brand-text/5 pb-4">
+                        Services
+                    </Link>
+                    <Link href="#team" onClick={() => setIsOpen(false)} className="text-2xl font-medium tracking-tight hover:text-brand-red transition-colors border-b border-brand-text/5 pb-4">
+                        Team
+                    </Link>
+                    <Link href="#contact" onClick={() => setIsOpen(false)} className="text-2xl font-medium tracking-tight hover:text-brand-red transition-colors">
+                        Contact
+                    </Link>
                 </div>
             </div>
         </nav>

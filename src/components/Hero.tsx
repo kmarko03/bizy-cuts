@@ -68,15 +68,6 @@ export default function Hero() {
                         </button>
                     </div>
 
-                    {/* Navigation Buttons for Gallery */}
-                    <div className="flex gap-3 mt-4 md:mt-0">
-                        <button onClick={() => scroll('left')} className="p-[14px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
-                            <ChevronLeft size={20} className="shrink-0" />
-                        </button>
-                        <button onClick={() => scroll('right')} className="p-[14px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
-                            <ChevronRight size={20} className="shrink-0" />
-                        </button>
-                    </div>
                 </div>
 
                 {/* Bottom Section: Gallery Carousel */}
@@ -99,6 +90,16 @@ export default function Hero() {
 
                         </div>
                     ))}
+                </div>
+
+                {/* Mobile Navigation Buttons (Moved to bottom for thumb access) */}
+                <div className="flex md:hidden justify-end gap-3 pb-8 pr-2">
+                    <button onClick={() => scroll('left')} className="p-[16px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
+                        <ChevronLeft size={20} className="shrink-0" />
+                    </button>
+                    <button onClick={() => scroll('right')} className="p-[16px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
+                        <ChevronRight size={20} className="shrink-0" />
+                    </button>
                 </div>
 
             </div>
