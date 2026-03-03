@@ -53,9 +53,14 @@ export default function Services() {
 
                 {/* Left Side: Headings */}
                 <div className="flex flex-col w-full lg:w-[55%] justify-center">
-                    <h2 className="text-[2rem] sm:text-5xl md:text-[4.5rem] leading-[0.95] font-medium tracking-tight text-brand-text mb-12">
-                        Services.
-                    </h2>
+                    <div className="mb-10 lg:mb-16">
+                        <h2 className="text-[2rem] sm:text-5xl md:text-[4.5rem] leading-[0.95] font-medium tracking-tight text-brand-text mb-4">
+                            Services
+                        </h2>
+                        <p className="text-[13px] md:text-sm font-medium text-brand-text/70 leading-relaxed max-w-sm">
+                            Expert cuts, styling, and grooming tailored to your unique look.
+                        </p>
+                    </div>
                     {servicesData.map((service) => (
                         <div
                             key={service.id}
@@ -67,7 +72,7 @@ export default function Services() {
                                 }
                             }}
                         >
-                            <h3 className={`text-[1.8rem] sm:text-4xl md:text-5xl lg:text-[4rem] xl:text-[4.5rem] font-medium tracking-tight cursor-pointer transition-colors leading-[1.0]
+                            <h3 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium tracking-tight cursor-pointer transition-colors leading-[1.0]
                                 ${activeService === service.id ? "text-brand-red" : "text-brand-text lg:hover:text-brand-red"}
                             `}>
                                 {service.title} {service.subtitle && <span className="lg:block">{service.subtitle}</span>}
