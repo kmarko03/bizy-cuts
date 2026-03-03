@@ -8,8 +8,11 @@ export default function Hero() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     const scroll = (direction: 'left' | 'right') => {
-        if (scrollContainerRef.current) {
-            const scrollAmount = window.innerWidth * 0.75; // Scroll by roughly one card
+        if (scrollContainerRef.current && scrollContainerRef.current.firstElementChild) {
+            // Calculate exact width of one item + the gap-6 (24px)
+            const itemWidth = scrollContainerRef.current.firstElementChild.clientWidth;
+            const scrollAmount = itemWidth + 24;
+
             scrollContainerRef.current.scrollBy({
                 left: direction === 'left' ? -scrollAmount : scrollAmount,
                 behavior: 'smooth'
