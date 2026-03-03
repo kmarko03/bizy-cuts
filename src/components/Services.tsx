@@ -93,7 +93,7 @@ export default function Services() {
                                                 window.location.href = "#contact";
                                             }
                                         }}
-                                        className="text-[10px] font-bold tracking-[0.2em] uppercase border-b border-brand-text pb-1 hover:text-brand-red hover:border-brand-red transition-colors inline-block"
+                                        className="text-[10px] font-bold tracking-[0.2em] uppercase border-b border-brand-text pb-1 hover:text-brand-red hover:border-brand-red active:text-brand-red active:border-brand-red transition-colors inline-block"
                                     >
                                         CALL TO BOOK
                                     </button>
@@ -137,7 +137,7 @@ export default function Services() {
                                                 window.location.href = "#contact";
                                             }
                                         }}
-                                        className="text-[10px] font-bold tracking-[0.2em] uppercase border-b border-brand-text pb-1 hover:text-brand-red hover:border-brand-red transition-colors inline-block"
+                                        className="text-[10px] font-bold tracking-[0.2em] uppercase border-b border-brand-text pb-1 hover:text-brand-red hover:border-brand-red active:text-brand-red active:border-brand-red transition-colors inline-block"
                                     >
                                         CALL TO BOOK
                                     </button>

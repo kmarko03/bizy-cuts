@@ -62,7 +62,7 @@ export default function Hero() {
                                     window.location.href = "#contact";
                                 }
                             }}
-                            className="px-8 py-4 border border-brand-text/20 rounded-full text-[11px] md:text-sm font-bold tracking-[0.2em] uppercase hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 inline-block text-center group bg-brand-bg shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:shadow-lg"
+                            className="px-8 py-4 border border-brand-text/20 rounded-full text-[11px] md:text-sm font-bold tracking-[0.2em] uppercase hover:bg-brand-red hover:text-white hover:border-brand-red active:bg-brand-red active:text-white active:border-brand-red transition-all duration-300 inline-block text-center group bg-brand-bg shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:shadow-lg"
                         >
                             Call to Book
                         </button>
@@ -92,12 +92,12 @@ export default function Hero() {
                     ))}
                 </div>
 
-                {/* Mobile Navigation Buttons (Moved to bottom for thumb access) */}
-                <div className="flex md:hidden justify-end gap-3 pb-8 pr-2">
-                    <button onClick={() => scroll('left')} className="p-[16px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
+                {/* Navigation Buttons (Moved to bottom for thumb access on all viewports) */}
+                <div className="flex justify-end gap-3 pb-8 pr-2">
+                    <button onClick={() => scroll('left')} className="p-[16px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red active:bg-brand-red active:text-white active:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
                         <ChevronLeft size={20} className="shrink-0" />
                     </button>
-                    <button onClick={() => scroll('right')} className="p-[16px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
+                    <button onClick={() => scroll('right')} className="p-[16px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red active:bg-brand-red active:text-white active:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
                         <ChevronRight size={20} className="shrink-0" />
                     </button>
                 </div>

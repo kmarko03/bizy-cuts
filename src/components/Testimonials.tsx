@@ -31,62 +31,62 @@ export default function Testimonials() {
 
     return (
         <section className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-brand-text text-brand-bg relative w-full overflow-hidden">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-center">
-
-                {/* Left Side: Header */}
-                <div className="w-full md:w-1/3 flex flex-col">
-                    <h2 className="text-[2rem] sm:text-5xl md:text-[4rem] leading-[0.95] font-medium tracking-tight mb-6">
-                        A Reputation<br />Built on<br />Results.
-                    </h2>
-                    <p className="text-[13px] md:text-sm font-medium text-brand-bg/70 leading-relaxed max-w-sm">
-                        Proudly serving Downers Grove since 2007 -- here's what our community has to say.
-                    </p>
-
-                    {/* Navigation Buttons for Testimonials */}
-                    <div className="flex gap-3 mt-12">
-                        <button onClick={handlePrev} className="p-[14px] border border-brand-bg/20 rounded-full text-brand-bg hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center bg-transparent shadow-sm">
-                            <ChevronLeft size={20} className="shrink-0" />
-                        </button>
-                        <button onClick={handleNext} className="p-[14px] border border-brand-bg/20 rounded-full text-brand-bg hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center bg-transparent shadow-sm">
-                            <ChevronRight size={20} className="shrink-0" />
-                        </button>
+            <div className="max-w-7xl mx-auto flex flex-col">
+                <div className="flex flex-col md:flex-row gap-16 md:gap-24 items-center w-full">
+                    {/* Left Side: Header */}
+                    <div className="w-full md:w-1/3 flex flex-col">
+                        <h2 className="text-[2rem] sm:text-5xl md:text-[4rem] leading-[0.95] font-medium tracking-tight mb-6">
+                            A Reputation<br />Built on<br />Results.
+                        </h2>
+                        <p className="text-[13px] md:text-sm font-medium text-brand-bg/70 leading-relaxed max-w-sm">
+                            Proudly serving Downers Grove since 2007 -- here's what our community has to say.
+                        </p>
                     </div>
-                </div>
 
-                {/* Right Side: Expanding Quote Area */}
-                <div className="w-full md:w-2/3 relative min-h-[300px] flex items-center">
-                    {testimonials.map((item, idx) => (
-                        <div
-                            key={idx}
-                            className={`absolute inset-0 flex flex-col justify-center transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] z-10 ${activeIndex === idx
-                                ? "opacity-100 translate-y-0 pointer-events-auto"
-                                : "opacity-0 translate-y-8 pointer-events-none"
-                                }`}
-                        >
-                            <div className="relative max-w-3xl mb-8">
-                                <Quote className="w-6 h-6 md:w-10 md:h-10 text-brand-bg/20 mb-4" />
-                                <p className="text-2xl md:text-4xl lg:text-[2.75rem] leading-[1.1] font-medium tracking-tight selection:bg-brand-red selection:text-white">
-                                    {item.quote}
-                                </p>
-                                <Quote className="w-6 h-6 md:w-10 md:h-10 text-brand-bg/20 mt-4 ml-auto rotate-180" />
-                            </div>
-                            <div className="flex items-center gap-4 mt-4">
-                                <div className="w-8 h-[1px] bg-brand-red"></div>
-                                <div>
-                                    <p className="text-[12px] md:text-[13px] font-bold tracking-[0.2em] uppercase text-brand-red">
-                                        {item.author}
+                    {/* Right Side: Expanding Quote Area */}
+                    <div className="w-full md:w-2/3 relative min-h-[300px] flex items-center">
+                        {testimonials.map((item, idx) => (
+                            <div
+                                key={idx}
+                                className={`absolute inset-0 flex flex-col justify-center transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] z-10 ${activeIndex === idx
+                                    ? "opacity-100 translate-y-0 pointer-events-auto"
+                                    : "opacity-0 translate-y-8 pointer-events-none"
+                                    }`}
+                            >
+                                <div className="relative max-w-3xl mb-8">
+                                    <Quote className="w-6 h-6 md:w-10 md:h-10 text-brand-bg/20 mb-4" />
+                                    <p className="text-2xl md:text-4xl lg:text-[2.75rem] leading-[1.1] font-medium tracking-tight selection:bg-brand-red selection:text-white">
+                                        {item.quote}
                                     </p>
-                                    <div className="flex gap-1 mt-1">
-                                        {[...Array(5)].map((_, i) => (
-                                            <Star key={i} className="w-3.5 h-3.5 text-brand-bg/50 fill-brand-bg/50" />
-                                        ))}
+                                    <Quote className="w-6 h-6 md:w-10 md:h-10 text-brand-bg/20 mt-4 ml-auto rotate-180" />
+                                </div>
+                                <div className="flex items-center gap-4 mt-4">
+                                    <div className="w-8 h-[1px] bg-brand-red"></div>
+                                    <div>
+                                        <p className="text-[12px] md:text-[13px] font-bold tracking-[0.2em] uppercase text-brand-red">
+                                            {item.author}
+                                        </p>
+                                        <div className="flex gap-1 mt-1">
+                                            {[...Array(5)].map((_, i) => (
+                                                <Star key={i} className="w-3.5 h-3.5 text-brand-bg/50 fill-brand-bg/50" />
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
 
+                {/* Navigation Buttons for Testimonials (Moved to bottom right) */}
+                <div className="flex justify-end gap-3 mt-8 md:mt-12 pr-2">
+                    <button onClick={handlePrev} className="p-[14px] border border-brand-bg/20 rounded-full text-brand-bg hover:bg-brand-red hover:text-white hover:border-brand-red active:bg-brand-red active:text-white active:border-brand-red transition-all duration-300 flex items-center justify-center bg-transparent shadow-sm">
+                        <ChevronLeft size={20} className="shrink-0" />
+                    </button>
+                    <button onClick={handleNext} className="p-[14px] border border-brand-bg/20 rounded-full text-brand-bg hover:bg-brand-red hover:text-white hover:border-brand-red active:bg-brand-red active:text-white active:border-brand-red transition-all duration-300 flex items-center justify-center bg-transparent shadow-sm">
+                        <ChevronRight size={20} className="shrink-0" />
+                    </button>
+                </div>
             </div>
         </section>
     );

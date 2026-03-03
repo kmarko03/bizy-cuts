@@ -128,12 +128,12 @@ export default function Team() {
                     ))}
                 </div>
 
-                {/* Mobile Navigation Buttons (Moved to bottom for thumb access) */}
-                <div className="flex md:hidden justify-end gap-3 pb-8 pr-2 mt-4">
-                    <button onClick={() => scroll('left')} className="p-[16px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
+                {/* Navigation Buttons (Moved to bottom for thumb access on all viewports) */}
+                <div className="flex justify-end gap-3 pb-8 pr-2 mt-4">
+                    <button onClick={() => scroll('left')} className="p-[16px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red active:bg-brand-red active:text-white active:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
                         <ChevronLeft size={20} className="shrink-0" />
                     </button>
-                    <button onClick={() => scroll('right')} className="p-[16px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
+                    <button onClick={() => scroll('right')} className="p-[16px] border border-brand-text/10 rounded-full text-brand-text hover:bg-brand-red hover:text-white hover:border-brand-red active:bg-brand-red active:text-white active:border-brand-red transition-all duration-300 flex items-center justify-center bg-brand-bg shadow-sm">
                         <ChevronRight size={20} className="shrink-0" />
                     </button>
                 </div>
