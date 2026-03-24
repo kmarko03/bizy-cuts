@@ -42,7 +42,7 @@ export default function Hero() {
     ];
 
     return (
-        <section id="hero" className="min-h-screen flex flex-col px-6 md:px-16 lg:px-24 bg-brand-bg pt-32 pb-16 overflow-hidden">
+        <section id="hero" className="min-h-[100dvh] flex flex-col px-6 md:px-16 lg:px-24 bg-brand-bg pt-32 pb-16 overflow-hidden">
             <div className="max-w-7xl w-full mx-auto relative animate-fade-in-up flex-1 flex flex-col h-full">
 
                 {/* Top Section: Text & Navigation */}

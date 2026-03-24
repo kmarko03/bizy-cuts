@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-brand-bg w-full overflow-x-clip selection:bg-brand-red selection:text-brand-white">
+    <main className="min-h-[100dvh] bg-brand-bg w-full overflow-x-clip selection:bg-brand-red selection:text-brand-white">
       <LoadingScreen />
       <Navbar />
       <Hero />
